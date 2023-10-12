@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>URL Shortener</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>URL Shortener</h1>
+    <form action="/shorten" method="post">
+      <label for="long_url">ENTER A LONG URL:</label>
+      <input type="text" name="long_url" id="long_url" required />
+      <input type="submit" value="Shorten URL" />
+    </form>
+    <form action="/list" method="get">
+      <input type="submit" value="List URLs" />
+    </form>
+  </body>
+</html>

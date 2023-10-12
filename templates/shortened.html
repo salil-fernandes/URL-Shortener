@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shortened URL</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Your Shortened URL</h1>
+    <p>Long URL: {{ long_url }}</p>
+    <p>
+      Shortened URL:
+      <a href="{{ short_url }}" target="_blank">{{ short_url }}</a>
+    </p>
+    <form action="/list" method="get">
+      <input type="submit" value="List URLs" />
+    </form>
+    <form action="/" method="get">
+      <input type="submit" value="Home" />
+    </form>
+  </body>
+</html>
